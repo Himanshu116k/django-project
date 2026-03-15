@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Tweet
+{% endblock %}
+
+{% block content %}
+  <h2>Register</h2>
+  <form method="post" novalidate>
+    {% csrf_token %}
+
+    {% if form.non_field_errors %}
+      <div class="alert alert-danger">
+        {{ form.non_field_errors }}
+      </div>
+    {% endif %}
+
+    {{ form.as_p }}
+
+    <button class="btn btn-primary" type="submit">Register</button>
+  </form>
+
+{% endblock %}

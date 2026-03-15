@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Tweet
+{% endblock %}
+
+{% block content %}
+ 
+{% csrf_token %}
+<h2>logged out</h2>
+
+
+<p>You have been logged out.<a href="{% url 'login' %}">Register here</a></p>
+
+
+{% endblock %}
